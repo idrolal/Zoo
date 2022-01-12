@@ -1,0 +1,29 @@
+{{!-- {{#if isAdmin}} --}}
+<h2>Страница изменения тарифов</h2>
+<ul>
+  {{#each tariffs}}
+  <li>
+    <form id="editTariff" method="PUT" action="/tariff/{{id}}">
+    <p>Тариф:{{name}}</p><br>
+    <input type="text" name="name" placeholder="имя..."/>
+    <p>Описание:{{description}}</p><br>
+    <input type="text" name="description" placeholder="описание..."/>
+    <p>Цена:{{price}}</p>
+    <input type="text" name="price" placeholder="цена..."/>
+  </li>
+  <button id="editBtn" type='submit'>Изменить</button>
+  </form>
+  {{/each}}
+</ul>
+{{!-- {{else}}
+<h2>Список наших тарифов</h2>
+<ul>
+  {{#each tariffs}}
+  <li>
+    <p>Тариф:{{name}}</p>
+    <p>Описание:{{description}}</p>
+    <p>Цена:{{price}}</p>
+  </li>
+  {{/each}}
+</ul>
+{{/if}} --}}
