@@ -2,11 +2,11 @@ const route = require('express').Router();
 const bcrypt = require('bcrypt');
 const { Admin } = require('../db/models');
 
-route.get('/login', (req, res) => {
+route.get('/', (req, res) => {
   res.render('auth');
 });
 
-route.post('/login', async (req, res) => {
+route.post('/', async (req, res) => {
   const { email, password } = req.body;
 
   const admin = await Admin.findOne({
