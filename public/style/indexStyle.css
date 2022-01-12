@@ -1,0 +1,16 @@
+body {
+  background-image: url("/img/фон.jpeg");
+  background-repeat: no-repeat; 
+  background-attachment: fixed;
+  /* background-position:40px 40px; */
+    /* margin:0 auto;
+    width:900px;
+    height:800px;
+    padding:30px; */
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  /* background-color: black; */
+}
