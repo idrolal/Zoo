@@ -20,7 +20,7 @@ const sessionConfig = {
     maxAge: 1000 * 60 * 60 * 12, // Срок истечения годности куки в миллисекундах
     httpOnly: true, // Серверная установка и удаление куки, по умолчанию true
   },
-}; 
+};
 
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'views'));
@@ -32,9 +32,6 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(expressSession(sessionConfig));
 app.use(express.urlencoded({ extended: true }));
-
-
-
 
 app.listen(PORT, () => {
   console.log('The server has been started', PORT);
