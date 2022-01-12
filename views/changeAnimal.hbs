@@ -12,7 +12,7 @@
 </div>
 <div>
   <h4>Форма добавления животного</h4>
-  <form>
+  <form method="POST" action="/changeAnimal" enctype="multipart/form-data">
     <div>
       <label>
         Наименование животного:<br>
@@ -28,7 +28,7 @@
     <div>
       <label>
         Загрузить фотографию:<br>
-        <input class="input" id="image" type='file' name='image'/>
+        <input type='file' name='img'/>
       </label>
     </div>
     <button type="submit">Добавить</button>
