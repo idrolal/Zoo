@@ -25,8 +25,9 @@ const sessionConfig = {
   },
 };
 
-//Роуты
-const authRoute = require('./routes/auth.route')
+// Роуты
+const authRoute = require('./routes/auth.route');
+const regRoute = require('./routes/reg.route');
 
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'views'));
@@ -38,6 +39,10 @@ app.use(cookieParser());
 app.use(expressSession(sessionConfig));
 app.use(sessionMiddleware);
 app.use(express.urlencoded({ extended: true }));
+
+
+app.use('/login', authRoute);
+app.use('/reg', regRoute);
 
 app.use('/', indexRoute);
 
