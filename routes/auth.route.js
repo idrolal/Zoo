@@ -19,9 +19,7 @@ route.post('/', async (req, res) => {
     } else if (admin && bcrypt.compare(password, admin.password)) {
       req.session.admin = admin;
       req.session.isAdmin = true;
-      res.json({
-        isAdmin: true,
-      });
+      res.json({ message: 'Всё чики-пуки, красава!' });
     }
   } catch (error) {
     res.status(404).json({ message: error.message });

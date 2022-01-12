@@ -45,6 +45,7 @@ app.use('/login', authRoute);
 app.use('/reg', regRoute);
 app.use('/logout', logoutRout);
 
+
 app.use('/', indexRoute);
 
 app.listen(PORT, () => {
