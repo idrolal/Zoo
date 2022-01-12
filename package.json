@@ -1,0 +1,39 @@
+{
+  "name": "contract-project-zoo",
+  "version": "1.0.0",
+  "description": "## Звонок от заказчика",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js --ignore ./sessions"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/idrolal/contract-project-zoo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/idrolal/contract-project-zoo/issues"
+  },
+  "homepage": "https://github.com/idrolal/contract-project-zoo#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cookie-parser": "^1.4.6",
+    "express": "^4.17.2",
+    "express-session": "^1.17.2",
+    "hbs": "^4.2.0",
+    "morgan": "^1.10.0",
+    "pg": "^8.7.1",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.13.0",
+    "sequelize-cli": "^6.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.6.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.4",
+    "nodemon": "^2.0.15"
+  }
+}
