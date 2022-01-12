@@ -18,7 +18,7 @@ login.addEventListener('submit', async (event) => {
 
   const json = await response.json();
 
-  if (json.isAdmin) {
+  if (json.message === 'Всё чики-пуки, красава!') {
     window.location.href = '/animal';
   }
 });

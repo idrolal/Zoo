@@ -51,6 +51,7 @@ app.use('/animal', animalPageRoute);
 app.use('/tariff', tariffPageRoute);
 app.use('/editTariff', editTariff);
 
+
 app.use('/', indexRoute);
 
 app.listen(PORT, () => {
