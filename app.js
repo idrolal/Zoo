@@ -25,6 +25,9 @@ const sessionConfig = {
   },
 };
 
+//Роуты
+const authRoute = require('./routes/auth.route')
+
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'views'));
 
@@ -37,6 +40,7 @@ app.use(sessionMiddleware);
 app.use(express.urlencoded({ extended: true }));
 
 app.use('/', indexRoute);
+
 
 app.listen(PORT, () => {
   console.log('The server has been started', PORT);
