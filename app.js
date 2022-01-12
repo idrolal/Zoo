@@ -1,13 +1,15 @@
-const path = require('path');
 const express = require('express');
 const morgan = require('morgan');
+const path = require('path');
+
+// cookie - session
 const cookieParser = require('cookie-parser');
 const expressSession = require('express-session');
 const FileStore = require('session-file-store')(expressSession);
-const bcrypt = require('bcrypt');
+const sessionMiddleware = require('./middleware/session');
+// const bcrypt = require('bcrypt');
 
 const PORT = 4000;
-
 const app = express();
 
 const sessionConfig = {
@@ -31,6 +33,7 @@ app.use(express.json());
 
 app.use(cookieParser());
 app.use(expressSession(sessionConfig));
+app.use(sessionMiddleware);
 app.use(express.urlencoded({ extended: true }));
 
 app.listen(PORT, () => {
