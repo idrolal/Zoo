@@ -9,17 +9,32 @@
     <script defer src='/js/auth.js'></script>
     <script defer src='/js/reg.js'></script>
     <script defer src='/js/changeanimal.client.js'></script>
+    <script defer src='/js/index.js'></script>
+    <script defer src='/js/editTariff.js'></script>
 
     <link rel="stylesheet" href="/style/indexStyle.css">
     <title>ЗООПАРК</title>
 
 </head>
 <body>
+  {{#if isAdmin}}
+  <div class="menu">
+<div><a href="/editAnimal">Изменение животных</a></div>
+<div><a href="/editTariff">Изменение тарифов</a></div>
+<div><a href="/logout">Выход</a></div>
+  </div>
+  {{else}}
   <div class="menu">
 <div><a href="/animal">Животные</a></div>
 <div><a href="/tariff">Тарифы</a></div>
-<button id="loginButton" type="submit">Войти</button>
+
+<button id="loginButton" type="button">Войти для администратора</button>
+
+<div><a href="/">Домой</a></div>
+
+
   </div>
+  {{/if}}
     {{{body}}}
 </body>
 </html>

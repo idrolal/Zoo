@@ -31,6 +31,9 @@ const sessionConfig = {
 const authRoute = require('./routes/auth.route');
 const regRoute = require('./routes/reg.route');
 const logoutRout = require('./routes/logout.route');
+const animalPageRoute = require('./routes/animalPage.route');
+const tariffPageRoute = require('./routes/tariffPage.route');
+const editTariff = require('./routes/editTariff.route');
 
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'views'));
@@ -48,6 +51,11 @@ app.use('/login', authRoute);
 app.use('/reg', regRoute);
 app.use('/logout', logoutRout);
 app.use('/changeAnimal', changeAnimalRouter);
+app.use('/animal', animalPageRoute);
+app.use('/tariff', tariffPageRoute);
+app.use('/editTariff', editTariff);
+
+
 
 app.use('/', indexRoute);
 
