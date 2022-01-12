@@ -8,6 +8,7 @@ const expressSession = require('express-session');
 const FileStore = require('session-file-store')(expressSession);
 const sessionMiddleware = require('./middleware/session');
 // const bcrypt = require('bcrypt');
+const indexRoute = require('./routes/index.route');
 
 const PORT = 4000;
 const app = express();
@@ -34,14 +35,17 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
-
 app.use(cookieParser());
 app.use(expressSession(sessionConfig));
 app.use(sessionMiddleware);
 app.use(express.urlencoded({ extended: true }));
 
+
 app.use('/login', authRoute);
 app.use('/reg', regRoute);
+
+app.use('/', indexRoute);
+
 
 app.listen(PORT, () => {
   console.log('The server has been started', PORT);
