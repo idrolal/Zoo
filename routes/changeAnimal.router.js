@@ -26,4 +26,12 @@ router.post('/', async (req, res) => {
   }
 });
 
+router.delete('/delete', async (req, res) => {
+  const { animalId } = req.body;
+  await Animal.destroy({
+    where: { id: animalId },
+  });
+  res.json({ message: 'Животное удалено' });
+});
+
 module.exports = router;
