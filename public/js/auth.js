@@ -19,5 +19,7 @@ login.addEventListener('submit', async (event) => {
 
   if (json.isAdmin) {
     window.location.href = '/';
+  } else {
+    alert('Неккоректно введен email или пароль')
   }
 });
