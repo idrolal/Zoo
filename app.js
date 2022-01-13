@@ -29,7 +29,7 @@ const sessionConfig = {
 
 // Роуты
 const authRoute = require('./routes/auth.route');
-const regRoute = require('./routes/reg.route');
+// const regRoute = require('./routes/reg.route');
 const logoutRout = require('./routes/logout.route');
 const animalPageRoute = require('./routes/animalPage.route');
 const tariffPageRoute = require('./routes/tariffPage.route');
@@ -48,7 +48,7 @@ app.use(sessionMiddleware);
 app.use(express.urlencoded({ extended: true }));
 
 app.use('/login', authRoute);
-app.use('/reg', regRoute);
+// app.use('/reg', regRoute);
 app.use('/logout', logoutRout);
 app.use('/changeAnimal', changeAnimalRouter);
 app.use('/animal', animalPageRoute);
