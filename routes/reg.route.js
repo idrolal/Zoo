@@ -16,9 +16,7 @@ route.post('/', async (req, res) => {
     });
     req.session.admin = admin;
     req.session.isAdmin = true;
-    res.json({
-      isAdmin: true,
-    });
+    res.json({ isAdmin: true });
   } catch (error) {
     res.json({ error: error.message });
   }

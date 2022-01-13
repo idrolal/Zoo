@@ -18,6 +18,8 @@ reg.addEventListener('submit', async (event) => {
   const json = await response.json();
 
   if (json.isAdmin) {
-    window.location.href = '/animal';
+    window.location.href = '/';
+  } else {
+    alert('Что-то пошло не так');
   }
 });
