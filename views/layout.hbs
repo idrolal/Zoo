@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Document</title>
+    <title>Урюпинский зоопарк</title>
     <script defer src='/js/auth.js'></script>
     <script defer src='/js/reg.js'></script>
     <script defer src='/js/changeanimal.client.js'></script>
@@ -13,29 +13,45 @@
     <script defer src='/js/editTariff.js'></script>
 
     <link rel="stylesheet" href="/style/indexStyle.css">
-    <title>ЗООПАРК</title>
+    {{!-- <title>ЗООПАРК</title> --}}
 
 </head>
 <body>
   {{#if isAdmin}}
-  <nav class="menu">
+  <div class="header">
     <ul class="topmenu">
+      <li>Урюпинский ЗООпарк</li>
 <li><a href="/editAnimal">Изменение животных</a></li>
 <li><a href="/editTariff">Изменение тарифов</a></li>
 <li><a href="/logout">Выход</a></li>
 </ul>
-  </nav>
-{{!-- <li><a href="/reg">Добавить администратора</a></li> --}}
+
   {{else}}
-  <nav class="one">
+  <div class="header">
     <ul class="topmenu">
-<li><a href="/animal">Животные</a></li>
-<li><a href="/tariff">Тарифы</a></li>
-<button id="loginButton" type="button">Вход для администратора</button> 
-<li><a href="/">Домой</a></li>
-</ul>
-  </nav>
+      <div class="container">
+        <div class="row">
+          <div class="menu">
+            <div class="menu-itemLOGO"><a href="/">УРЮПИНСКИЙ<br>ЗООПАРК</a></div>
+            <div class="menu-item"><a href="/animal">Животные</a></div>
+            <div class="menu-item"><a href="/tariff">Тарифы</a></div>
+            <div class="menu-item"><a href="/login">kjuby</a></div>
+          </div>
+          <div class="ticket-buy">
+            <p class="title">Ждём Вас:</p>
+            <p class="work-hours">09:00 - 17:00</p>
+            <p class="work-hours-cashier">Кассы открыты до 16:00</p>
+          </div>
+        </div>
+      </div>
+    </ul>
+  </div>  
+
   {{/if}}
     {{{body}}}
 </body>
+  <div class="square"></div>
+  <footer class="footer">
+  <button id="loginButton" type="button">Вход для администратора</button>
+  </footer>
 </html>

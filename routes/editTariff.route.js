@@ -1,5 +1,4 @@
 const route = require('express').Router();
-const pool = require('pg').pool();
 const { Tariff } = require('../db/models');
 
 route.get('/', async (req, res) => {
@@ -12,27 +11,23 @@ route.get('/', async (req, res) => {
   });
 });
 
-route.get('/:id', async (req, res) => {
-  const { id } = req.body;
-  pool.query('SELECT * FROM tariff WHERE id=?', [id], (err, data) => {
-    if (err) return alert('ooops');
-    return res.render('tariffPage', {
-      tariff: data[0],
+route.put('/', async (req, res) => {
+  const {
+    name, description, price, id,
+  } = req.body;
+  console.log('reqbody', req.body);
+  try {
+    const tariff = await Tariff.update({
+      name,
+      description,
+      price,
+    }, {
+      where: { id },
     });
-  });
-});
-
-route.post('/:id', async (req, res) => {
-  const { name, description, price } = req.body;
-  //   const tariff = await Tariff.update({
-  //     name,
-  //     description,
-  //     price,
-  //   });
-  pool.query('UPDATE tariff SET name=?, description=?, price=? WHERE id=?', [name, description, price], (err, data) => {
-    if (err) return alert('opps');
-    return res.json({ message: 'wow' });
-  });
+    res.json({ message: 'wow' });
+  } catch (error) {
+    res.status(500).json({ message: 'Ошибка' });
+  }
 });
 
 module.exports = route;
