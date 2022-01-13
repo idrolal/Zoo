@@ -1,0 +1,25 @@
+<div>
+  <h4>Форма изменения информации животного</h4>
+  <form id="editanimal" enctype="multipart/form-data">
+    <div>
+      <label>
+        Наименование животного:<br>
+        <input class="input" id="name" type='text' name='name'/>
+      </label>
+    </div>
+    <div>
+      <label>
+        Описание:<br>
+        <input class="input" id="description" type='text' name='description'/>
+      </label>
+    </div>
+    <div>
+      <label>
+        Загрузить фотографию:<br>
+        <input type='file' name='img'/>
+      </label>
+    </div>
+    <button type="submit">Изменить</button>
+  </form>  
+</div>
+<script defer src="/js/editAnimal.client.js"></script>
