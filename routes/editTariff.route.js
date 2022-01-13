@@ -3,6 +3,7 @@ const { Tariff } = require('../db/models');
 
 route.get('/', async (req, res) => {
   const tariff = await Tariff.findAll();
+  console.log('TARIF', tariff)
   res.render('tariffPage', {
     tariff,
     isAdmin: req.session.isAdmin,

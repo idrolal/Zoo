@@ -1,21 +1,22 @@
 {{#if isAdmin}}
 <h2>Страница изменения тарифов</h2>
 
-  {{#each tariff}}
+{{#each tariff}}
+<ul>
   <li>
-    <form id="editTariff" method="PUT" action="/tariff">
-    <p>Тариф:{{name}}</p><br>
-    <input type="text" name="name" placeholder="имя..."/>
-    <p>Описание:{{description}}</p><br>
-    <input type="text" name="description" placeholder="описание..."/>
-    <p>Цена:{{price}}</p>
-    <input type="text" name="price" placeholder="цена..."/>
+    <form class="editTariff" method="PUT" action="/tariff">
+      <p>Тариф:{{name}}</p><br>
+      <input type="text" name="name" placeholder="имя..." />
+      <p>Описание:{{description}}</p><br>
+      <input type="text" name="description" placeholder="описание..." />
+      <p>Цена:{{price}}</p>
+      <input type="text" name="price" placeholder="цена..." />
+      <button id="editBtn" value={{id}} name='button' class="editBtn" type='submit'>Изменить</button>
+    </form>
   </li>
-  <button id="editBtn" value={{id}} name='button' class="editBtn" type='submit'>Изменить</button>
   {{!-- <a href="" class="editBtn"><span>Изменить</span></a> --}}
-  </form>
-  {{/each}}
 </ul>
+{{/each}}
 {{else}}
 <div class="wrap">
   {{#each tariff}}
@@ -37,4 +38,3 @@
   {{/each}}
 </div>
 {{/if}}
-
