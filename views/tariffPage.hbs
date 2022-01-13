@@ -1,6 +1,5 @@
-{{!-- {{#if isAdmin}} --}}
-{{!-- <h2>Страница изменения тарифов</h2> --}}
-<ul>
+{{#if isAdmin}}
+<h2>Страница изменения тарифов</h2>
   {{#each tariffs}}
   <li>
     <form id="editTariff" method="PUT" action="/tariff/{{id}}">
@@ -16,15 +15,27 @@
   </form>
   {{/each}}
 </ul>
-{{!-- {{else}}
-<h2>Список наших тарифов</h2>
-<ul>
+{{else}}
+<div class="wrap">
   {{#each tariffs}}
-  <li>
-    <p>Тариф:{{name}}</p>
-    <p>Описание:{{description}}</p>
-    <p>Цена:{{price}}</p>
-  </li>
+  <div class="box">
+    <div class="top">
+      <p class="title">Тариф:«{{name}}»</p>
+      <p class="price">
+        {{price}}
+        <span>/RUB.</span>
+      </p>
+      <a class="button" href="#">Купить билет</a>
+    </div>
+    <div class="bottom">
+      <ul>
+        <li>{{description}}</li>
+      </ul>
+    </div>
+  </div>
   {{/each}}
-</ul>
-{{/if}} --}}
+</div>
+{{/if}}
+
+
+
