@@ -8,7 +8,7 @@ route.get('/', (req, res) => {
 
 route.post('/', async (req, res) => {
   const { email, password } = req.body;
-
+  console.log('req.body', req.body);
   const admin = await Admin.findOne({
     where: { email },
   });
@@ -19,7 +19,9 @@ route.post('/', async (req, res) => {
     } else if (admin && bcrypt.compare(password, admin.password)) {
       req.session.admin = admin;
       req.session.isAdmin = true;
-      res.json({ message: 'Всё чики-пуки, красава!' });
+      res.json({
+        isAdmin: true,
+      });
     }
   } catch (error) {
     res.status(404).json({ message: error.message });

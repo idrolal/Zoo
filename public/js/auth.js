@@ -11,14 +11,13 @@ login.addEventListener('submit', async (event) => {
   const response = await fetch(action, {
     method,
     headers: {
-      'Content-Type': 'application/js',
+      'Content-Type': 'application/json',
     },
     body: JSON.stringify(body),
   });
-
   const json = await response.json();
 
-  if (json.message === 'Всё чики-пуки, красава!') {
-    window.location.href = '/animal';
+  if (json.isAdmin) {
+    window.location.href = '/';
   }
 });
