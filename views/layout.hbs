@@ -16,22 +16,22 @@
 </head>
 <body>
   {{#if isAdmin}}
-  <div class="menu">
-<div><a href="/editAnimal">Изменение животных</a></div>
-<div><a href="/editTariff">Изменение тарифов</a></div>
-<div><a href="/logout">Выход</a></div>
-  </div>
+  <nav class="menu">
+    <ul class="topmenu">
+<li><a href="/editAnimal">Изменение животных</a></li>
+<li><a href="/editTariff">Изменение тарифов</a></li>
+<li><a href="/logout">Выход</a></li>
+</ul>
+  </nav>
   {{else}}
-  <div class="menu">
-<div><a href="/animal">Животные</a></div>
-<div><a href="/tariff">Тарифы</a></div>
-
+  <nav class="one">
+    <ul class="topmenu">
+<li><a href="/animal">Животные</a></li>
+<li><a href="/tariff">Тарифы</a></li>
 <button id="loginButton" type="button">Войти для администратора</button>
-
-<div><a href="/">Домой</a></div>
-
-
-  </div>
+<li><a href="/">Домой</a></li>
+</ul>
+  </nav>
   {{/if}}
     {{{body}}}
 </body>
