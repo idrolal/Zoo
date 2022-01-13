@@ -1,9 +1,9 @@
-{{!-- {{#if isAdmin}} --}}
+{{#if isAdmin}}
 <h2>Страница изменения тарифов</h2>
 <ul>
-  {{#each tariffs}}
+  {{#each tariff}}
   <li>
-    <form id="editTariff" method="PUT" action="/tariff/{{id}}">
+    <form id="editTariff" method="PUT" action="/tariff{{id}}">
     <p>Тариф:{{name}}</p><br>
     <input type="text" name="name" placeholder="имя..."/>
     <p>Описание:{{description}}</p><br>
@@ -16,10 +16,10 @@
   </form>
   {{/each}}
 </ul>
-{{!-- {{else}}
+{{else}}
 <h2>Список наших тарифов</h2>
 <ul>
-  {{#each tariffs}}
+  {{#each tariff}}
   <li>
     <p>Тариф:{{name}}</p>
     <p>Описание:{{description}}</p>
@@ -27,4 +27,4 @@
   </li>
   {{/each}}
 </ul>
-{{/if}} --}}
+{{/if}}
