@@ -1,12 +1,12 @@
 <div>
   <h4>Текущий список животных</h4>
-  {{#each animal}}
+  {{#each allAnimal}}
     <div>
-      <img width="100" height="100" src="{{photo}}">
+      <img width="100" height="100" src="/img/{{photo}}">
       <p>{{name}}</p>
       <p>Описание: {{description}}</p>
       <button id='buttonDelete'  value= {{id}}>Удалить</button>
-      <a href="/changeAnimal/edit" >Ссылка на страницу редактирования животного</a>
+      <a href="/changeAnimal/edit" >Редактировать</a>
     </div>  
   {{/each}}
 </div>

@@ -3,8 +3,9 @@ const uuid = require('uuid');
 const path = require('path');
 const { Animal } = require('../db/models');
 
-router.get('/', (req, res) => {
-  res.render('changeAnimal');
+router.get('/', async (req, res) => {
+  const allAnimal = await Animal.findAll();
+  res.render('changeAnimal', { allAnimal });
 });
 
 router.post('/', async (req, res) => {
