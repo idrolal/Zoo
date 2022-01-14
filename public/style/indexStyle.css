@@ -315,6 +315,12 @@ p {
   text-align: center;
   font-weight: bold;
 }
+.title, .work-hours .work-hours{
+  font-family: 'ALS Mendeleev';
+  line-height: 1.5rem;
+  font-size: 1.25rem;
+  font-weight: normal;
+}
 .price {
   font-size: 70px;
   font-weight: bold;
