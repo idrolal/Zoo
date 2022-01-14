@@ -1,40 +1,41 @@
 
-<div class="animal">
+<div class="animal" style="margin-left:0px">
   {{#each allAnimal}}
-  <div class="animalMenu" data-id="{{id}}">
-    <figure class="caption-shadow">
-      <img width="100" height="100" src="/img/{{photo}}">
-      <figcaption>{{name}}</figcaption>
+  <div class="animalMenu cartoon" style="margin-right:20px" data-id="{{id}}">
+    <figure class="container1">
+      <img class='cartoonIMG'width="100" height="100" src="/img/{{photo}}">
+      <figcaption class="desc2" style="margin-left: 5px; margin-top: 15px">{{name}}</figcaption>
+      <figcaption class="desc2" style="margin-left: 5px; margin-top: 15px">{{description}}</figcaption>
     </figure>
     <div class="btnAnimal">
       <button id='buttonDelete' value= {{id}}>Удалить</button>
-      <button><a href="/changeAnimal/{{id}}">Редактировать</a></button>
+      <button><a style="color:white" href="/changeAnimal/{{id}}">Редактировать</a></button>
     </div>
   </div>
   {{/each}}
 </div>
 
-<div>
-  <h4>Форма добавления животного</h4>
+<div class='form1'>
+  <h4 class='desc2' style="font-size: 30px">Форма добавления животного</h4>
   <form id="changeanimal" method="POST" action="/changeAnimal" enctype="multipart/form-data">
     <div>
-      <label>
+      <label class='desc2' style="font-size: 25px">
         Наименование животного:<br>
         <input class="input" id="name" type='text' name='name' />
       </label>
     </div>
     <div>
-      <label>
+      <label class='desc2' style="font-size: 25px">
         Описание:<br>
         <input class="input" id="description" type='text' name='description' />
       </label>
     </div>
     <div>
-      <label>
+      <label class='desc2' style="font-size: 25px">
         Загрузить фотографию:<br>
-        <input type='file' name='img' />
+        <input type='file' class="btnAnimalAdd"  name='img' />
       </label>
     </div>
-    <button type="submit">Добавить</button>
+    <button type="submit" class="btnAnimalAdd">Добавить</button>
   </form>
 </div>
