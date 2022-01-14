@@ -8,6 +8,7 @@ changeanimal.addEventListener('submit', async (event) => {
   });
   const json = await response.json();
   alert(json.message);
+  window.location.href = '/changeAnimal';
 });
 
 document.querySelectorAll('#buttonDelete')?.forEach((link) => link.addEventListener('click', async (event) => {
@@ -29,4 +30,5 @@ document.querySelectorAll('#buttonDelete')?.forEach((link) => link.addEventListe
   });
   const json = await response.json();
   console.log(json.message);
+  
 }));
