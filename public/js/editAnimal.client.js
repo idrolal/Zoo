@@ -1,4 +1,3 @@
-const row = document.querySelector('.row1')
 const editanimal = document.getElementById('editanimal');
 editanimal.addEventListener('submit', async (event) => {
   event.preventDefault();

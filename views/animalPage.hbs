@@ -1,15 +1,16 @@
-<center><h2 class="desc3">Список животных нашего зоопарка</h2></center>
-<div class='all'>
-{{#each animals}}
-  <div class="container1">
-    <div class="row1">
-      <div data-id="{{id}}" class="png">
-       <img src="/img/{{photo}}">
-       <p class="desc1">{{name}}</p>
-        <p class="desc2">{{description}}</p>
-      </div> 
+<center>
+  <h2 class="desc3">Список животных нашего зоопарка</h2>
+</center>
+  <div class='all'>
+    {{#each animals}}
+    <div class="container1">
+      <div class="row1">
+        <div data-id="{{id}}" class="png">
+          <img src="/img/{{photo}}">
+          <p class="desc1">{{name}}</p>
+          <p class="desc2 ogr">{{description}}</p>
+        </div>
+      </div>
     </div>
+    {{/each}}
   </div>
-{{/each}}
-</div>
-
