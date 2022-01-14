@@ -11,6 +11,7 @@ const sessionMiddleware = require('./middleware/session');
 // const bcrypt = require('bcrypt');
 const indexRoute = require('./routes/index.route');
 const changeAnimalRouter = require('./routes/changeAnimal.router');
+const contactRouter = require('./routes/contact.router');
 
 const PORT = 4000;
 const app = express();
@@ -56,6 +57,7 @@ app.use('/changeAnimal', changeAnimalRouter);
 app.use('/animal', animalPageRoute);
 app.use('/tariff', tariffPageRoute);
 app.use('/editTariff', editTariff);
+app.use('/contact', contactRouter);
 
 app.use('/', indexRoute);
 

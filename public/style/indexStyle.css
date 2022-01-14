@@ -1,10 +1,18 @@
-
+body {
+  font-family:'Bowlby One SC', cursive;
+}
 .header {
   /* background-color: rgb(58, 25, 25); */
   align-items: center;
   font: inherit;
+  background: #00282d;
 }
 .container {
+  display: flex;
+  flex-wrap: wrap;
+  height: 80px;
+  align-items: inherit;
+  position: relative;
   max-width: 960px;
   width: 100%;
     padding-right: 15px;
@@ -12,7 +20,60 @@
     margin-right: auto;
     margin-left: auto;
 }
+
 .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  height: 80px;
+  justify-content: flex-start;
+  align-items: center;
+    position: relative;
+}
+.row1 {
+  height: auto;
+  width: 350px;  
+}
+
+.png {
+  height: 250px;
+  width: auto;
+  margin: 11%;
+}
+
+img {
+  padding: 0;
+  margin: 0;
+  height: 200px;
+  width: auto;
+}
+
+.container1 {
+  height: 350px;
+  width: 350px;
+  margin: 0;
+  box-shadow:  0px 5px 10px 2px rgba(149, 255, 0, 0.467);
+  background-color: transparent;
+}
+.desc1 {
+  font-family: 'Bowlby One SC', cursive;
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Rubik Beastly', cursive;
+  font-size: 25px;
+  color: white;
+}
+
+.desc2 {
+  font-family: 'Bowlby One SC', cursive;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Rubik Beastly', cursive;
+font-family: 'Ruslan Display', cursive;
+font-size: 20px;
+color: white;
+}
+
+.all {
   display: flex;
   flex-wrap: wrap;
   margin-right: -15px;
@@ -45,11 +106,14 @@
   align-items: inherit;
   position: relative;
 }
+.menu-item a:hover{
+  color: yellow;
+}
 /* Режим работы */
 .ticket-buy {
   display: block;
   position: absolute;
-  z-index: 3;
+  z-index: 1;
   top: 0;
   right: 0;
   background-color: #006455;
@@ -60,6 +124,7 @@
   padding: 20px;
   box-sizing: border-box;
 }
+
 body {
   /* background-image: url("/img/фон.jpeg"); */
   /* background-repeat: no-repeat;  */
@@ -90,6 +155,7 @@ ul {
 .topmenu > li:last-child {
   margin-right: 0;
 }
+
 a {
   display: block;
   padding: 10px 15px;
@@ -182,9 +248,12 @@ a {
   font-size: 24px;
   color: #1df842;
 }
-.footer {
-  margin-top: 90%;
-  height: 300px;
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 50px;
+  width: 100%;
   background-color: rgb(67, 110, 150);
 }
 
@@ -273,4 +342,82 @@ li {
   color: #6eaca7;
   font-size: 16px;
   line-height: 40px;
+}
+
+
+/* Окошки изменения животных */
+* {box-sizing: border-box;}
+.caption-shadow {
+  width: 400px;
+  height: 200px;
+  margin: 50px auto 0;
+  position: relative;
+  border: 5px solid #FAAB1B;
+}
+.caption-shadow img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.caption-shadow figcaption {
+  width: 100%;
+  padding: 10px;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  background: #FAAB1B;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  box-shadow: 0 -10px 20px -5px hsla(0, 0%, 0%, .4);
+}
+.animal {
+  display: flex;
+  flex-wrap: wrap;
+} 
+.animalMenu {
+  margin-right:  20px;
+}
+.btnAnimal {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    background: white;
+    cursor: pointer;
+    transition: .3s linear;
+  }
+  .btnAnimal button {
+    margin-top: 30px;
+    /* border-bottom: 4px solid #4da72a; */
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    background: white;
+    cursor: pointer;
+    transition: .3s linear;
+  }
+  .btnAnimal button a{
+    margin-top: 30px;
+    /* border-bottom: 4px solid #4da72a; */
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    background: white;
+    cursor: pointer;
+    transition: .3s linear;
+  }
+  .editBtn:hover {
+    background: #848884;
+  }
 }
