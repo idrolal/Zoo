@@ -1,9 +1,15 @@
+
 .header {
   align-items: center;
   font: inherit;
   background-color: white;
 }
 .container {
+  display: flex;
+  flex-wrap: wrap;
+  height: 80px;
+  align-items: inherit;
+  position: relative;
   max-width: 960px;
   width: 100%;
     padding-right: 15px;
@@ -11,6 +17,7 @@
     margin-right: auto;
     margin-left: auto;
 }
+
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -21,7 +28,69 @@
   align-items: center;
     position: relative;
 }
+
+.row1 {
+  height: auto;
+  width: 350px;  
+}
+
+.png {
+  height: 250px;
+  width: auto;
+  margin: 11%;
+}
+
+img {
+  padding: 0;
+  margin: 0;
+  height: 200px;
+  width: auto;
+}
+
+.container1 {
+  height: 350px;
+  width: 350px;
+  margin: 0;
+  box-shadow:  0px 5px 10px 2px rgba(3, 126, 58, 0.815);
+  background-color: transparent;
+  border-radius: 5%;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+.desc1 {
+  font-family: 'Bowlby One SC', cursive;
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Rubik Beastly', cursive;
+  font-size: 25px;
+  color: white;
+}
+
+.desc2,
+.desc3 {
+  font-family: 'Bowlby One SC', cursive;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Rubik Beastly', cursive;
+font-family: 'Ruslan Display', cursive;
+font-size: 20px;
+color: white;
+}
+.desc3{
+  font-size: 40px;
+}
+
+.all {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  height: 80px;
+  justify-content: flex-start;
+  align-items: center;
+    position: relative;
+}
+
 /* .logo {
+>>>>>>> 038284ec866518c3160a22a431c019f3009725d1
   position: static;
   width: 70px;
   height: 70px;
@@ -47,11 +116,14 @@
   position: relative;
 }
 
+.menu-item a:hover{
+  color: rgba(3, 126, 58, 0.815);
+}
 /* Режим работы */
 .ticket-buy {
   display: block;
   position: absolute;
-  z-index: 3;
+  z-index: 1;
   top: 0;
   right: 0;
   background-color: #abad02;
@@ -65,12 +137,15 @@
 }
 
 
+
+
 body {
   /* background-image: url("/img/фон.jpeg"); */
   /* background-repeat: no-repeat;  */
   background-size: 100%; 
   background-color: rgb(23, 24, 63);
   margin:0;
+  font-family:'Bowlby One SC', cursive;
 }
 h2 {
   font-family: monospace;
@@ -187,6 +262,15 @@ ul {
   font-weight: 500;
   font-size: 24px;
   color: #1df842;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 50px;
+  width: 100%;
+  background-color: rgb(67, 110, 150);
 }
 
 

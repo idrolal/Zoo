@@ -1,3 +1,4 @@
+const row = document.querySelector('.row1')
 const editanimal = document.getElementById('editanimal');
 editanimal.addEventListener('submit', async (event) => {
   event.preventDefault();
@@ -9,5 +10,6 @@ editanimal.addEventListener('submit', async (event) => {
     body: new FormData(editanimal),
   });
   const json = await response.json();
+  // row.innerHTML = `<div class='png'>${json.text()}</div>`
   alert(json.message);
 });

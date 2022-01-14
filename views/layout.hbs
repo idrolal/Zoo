@@ -1,33 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Урюпинский зоопарк</title>
-    <script>
-      (function(d, w, c) {
-        w.ChatraID = 'MRsZZogrjfKFstNCp';
-        var s = d.createElement('script');
-        w[c] = w[c] || function() {
-            (w[c].q = w[c].q || []).push(arguments);
-        };
-        s.async = true;
-        s.src = 'https://call.chatra.io/chatra.js';
-        if (d.head) d.head.appendChild(s);
-      })(document, window, 'Chatra');
-    </script>
-    <script defer src='/js/auth.js'></script>
-    <script defer src='/js/reg.js'></script>
-    <script defer src='/js/changeanimal.client.js'></script>
-    <script defer src='/js/index.js'></script>
-    <script defer src='/js/editTariff.js'></script>
-    <script defer src='/js/cart.client.js'></script>
-    <link rel="stylesheet" href="/style/indexStyle.css">
-    {{!-- <title>ЗООПАРК</title> --}}
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Урюпинский зоопарк</title>
+  <script>
+    (function (d, w, c) {
+      w.ChatraID = 'MRsZZogrjfKFstNCp';
+      var s = d.createElement('script');
+      w[c] = w[c] || function () {
+        (w[c].q = w[c].q || []).push(arguments);
+      };
+      s.async = true;
+      s.src = 'https://call.chatra.io/chatra.js';
+      if (d.head) d.head.appendChild(s);
+    })(document, window, 'Chatra');
+  </script>
+  <script defer src='/js/auth.js'></script>
+  <script defer src='/js/reg.js'></script>
+  <script defer src='/js/changeanimal.client.js'></script>
+  <script defer src='/js/index.js'></script>
+  <script defer src='/js/editTariff.js'></script>
+  <script defer src='/js/cart.client.js'></script>
+  <link rel="stylesheet" href="/style/indexStyle.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Open+Sans:wght@800&family=Rubik+Beastly&display=swap"
+    rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Open+Sans:wght@800&family=Rubik+Beastly&display=swap');
+  </style>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Open+Sans:wght@800&family=Rubik+Beastly&family=Ruslan+Display&display=swap"
+    rel="stylesheet">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Open+Sans:wght@800&family=Rubik+Beastly&family=Ruslan+Display&display=swap');
+  </style>
+
+  {{!-- <title>ЗООПАРК</title> --}}
 
 </head>
+
 <body>
   {{#if isAdmin}}
   <div class="header">
@@ -36,9 +57,9 @@
         <div class="row">
           <div class="menu">
             <div class="menu-itemLOGO"><a href="/">УРЮПИНСКИЙ<br>ЗООПАРК</a></div>
-            <div><a href="/changeAnimal">Изменение животных</a></div>
-            <div><a href="/editTariff">Изменение тарифов</a></div>
-            <div><a href="/logout">Выход</a></div>
+            <div class="menu-item"><a href="/changeAnimal">Изменение животных</a></div>
+            <div class="menu-item"><a href="/editTariff">Изменение тарифов</a></div>
+            <div class="menu-item"><a href="/logout">Выход</a></div>
           </div>
         </div>
       </div>
@@ -50,10 +71,15 @@
       <div class="container">
         <div class="row">
           <div class="menu">
-            <div class="menu-itemLOGO"><a class="mainAhref" href="/">УРЮПИНСКИЙ<br>ЗООПАРК</a></div>
-            <div class="menu-itemLOGO"><a class="mainAhref" href="/animal">Животные</a></div>
-            <div class="menu-itemLOGO"><a class="mainAhref" href="/tariff">Тарифы</a></div>
-            <div class="menu-itemLOGO"><a class="mainAhref" href="/login">Войти</a></div>
+
+            <div class="menu-itemLOGO"><a href="/">УРЮПИНСКИЙ<br>ЗООПАРК</a></div>
+            <div class="menu-item"><a href="/animal">Животные</a></div>
+            <div class="menu-item"><a href="/tariff">Тарифы</a></div>
+
+            <div class="menu-item"><a href="/login">Войти</a></div>
+            <div class="menu-item"><a href="/contact">Контакты</a></div>
+
+
           </div>
           <div class="ticket-buy">
             <p class="title">Ждём Вас:</p>
@@ -64,13 +90,10 @@
         </div>
       </div>
     </ul>
-  </div>  
+  </div>
   {{/if}}
-    {{{body}}}
+  {{{body}}}
+
 </body>
-  {{!-- <div class="square"></div>
-  <footer class="footer">
-  <button id="loginButton" type="button">Вход для администратора</button>
-  </footer> --}}
-</html>
+
 
