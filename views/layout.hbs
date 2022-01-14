@@ -20,12 +20,18 @@
   {{#if isAdmin}}
   <div class="header">
     <ul class="topmenu">
-      <li>Урюпинский ЗООпарк</li>
-<li><a href="/changeAnimal">Изменение животных</a></li>
-<li><a href="/editTariff">Изменение тарифов</a></li>
-<li><a href="/logout">Выход</a></li>
-</ul>
-
+      <div class="container">
+        <div class="row">
+          <div class="menu">
+            <div class="menu-itemLOGO"><a href="/">УРЮПИНСКИЙ<br>ЗООПАРК</a></div>
+            <div><a href="/changeAnimal">Изменение животных</a></div>
+            <div><a href="/editTariff">Изменение тарифов</a></div>
+            <div><a href="/logout">Выход</a></div>
+          </div>
+        </div>
+      </div>
+    </ul>
+  </div>
   {{else}}
   <div class="header">
     <ul class="topmenu">
