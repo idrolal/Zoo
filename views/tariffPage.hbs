@@ -1,0 +1,41 @@
+{{#if isAdmin}}
+<h2>Страница изменения тарифов</h2>
+
+{{#each tariff}}
+<ul>
+  <li>
+    <form class="editTariff" method="PUT" action="/tariff">
+      <p>Тариф:{{name}}</p><br>
+      <input type="text" name="name" placeholder="имя..." />
+      <p>Описание:{{description}}</p><br>
+      <input type="text" name="description" placeholder="описание..." />
+      <p>Цена:{{price}}</p>
+      <input type="text" name="price" placeholder="цена..." /><br>
+      <button id="editBtn" value={{id}} name='button' class="editBtn" type='submit'>Изменить</button>
+    </form>
+  </li>
+  {{!-- <a href="" class="editBtn"><span>Изменить</span></a> --}}
+</ul>
+{{/each}}
+{{else}}
+<div class="wrap">
+  {{#each tariff}}
+  <div class="box">
+    <div class="top">
+      <p class="title">Тариф:«{{name}}»</p>
+      <p class="price">
+        {{price}}
+        <span>/КРЕДИТОВ.</span>
+      </p>
+      <button id="button" class="button" onclick="alertCookieValue()">ВЗЯТЬ</button>
+      {{!-- <button onclick="alertCookieValue()">Show cookie value</button> --}}
+    </div>
+    <div class="bottom">
+      <ul>
+        <li>{{description}}</li>
+      </ul>
+    </div>
+  </div>
+  {{/each}}
+</div>
+{{/if}}
