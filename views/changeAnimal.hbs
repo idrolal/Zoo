@@ -1,16 +1,19 @@
-<div>
-  <h4>Текущий список животных</h4>
+
+<div class="animal">
   {{#each allAnimal}}
-    <div data-id="{{id}}">
+  <div class="animalMenu" data-id="{{id}}">
+    <figure class="caption-shadow">
       <img width="100" height="100" src="/img/{{photo}}">
-      <p>{{name}}</p>
-      <p>Описание: {{description}}</p>
-      <button id='buttonDelete'  value= {{id}}>Удалить</button>
-      <a href="/changeAnimal/{{id}}">Редактировать</a>
-    </div>  
+      <figcaption>{{name}}</figcaption>
+    </figure>
+    <div class="btnAnimal">
+      <button id='buttonDelete' value= {{id}}>Удалить</button>
+      <button><a href="/changeAnimal/{{id}}">Редактировать</a></button>
+    </div>
+  </div>
   {{/each}}
 </div>
-<div>tariffs
+
   <h4>Форма добавления животного</h4>
   <form id="changeanimal" method="POST" action="/changeAnimal" enctype="multipart/form-data">
     <div>
@@ -33,4 +36,5 @@
     </div>
     <button type="submit">Добавить</button>
   </form>  
-</div>
+
+

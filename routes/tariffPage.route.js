@@ -2,9 +2,9 @@ const route = require('express').Router();
 const { Tariff } = require('../db/models');
 
 route.get('/', async (req, res) => {
-  const tariffs = await Tariff.findAll();
+  const tariff = await Tariff.findAll();
   res.render('tariffPage', {
-    tariffs,
+    tariff,
     isAdmin: req.session.isAdmin,
     name: req.session.admin?.name,
     password: req.session.admin?.password,
